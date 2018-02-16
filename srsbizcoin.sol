@@ -88,7 +88,7 @@ contract StandardToken is Token {
 
 
 //name this contract whatever you'd like
-contract ERC20Token is StandardToken {
+contract SrsBizCoin is StandardToken {
 
     function () {
         //if ether is sent to this address, send it back.
@@ -108,19 +108,12 @@ contract ERC20Token is StandardToken {
     string public symbol;                 //An identifier: eg SBX
     string public version = 'H1.0';       //human 0.1 standard. Just an arbitrary versioning scheme.
 
-//
-// CHANGE THESE VALUES FOR YOUR TOKEN
-//
-
-//make sure this function name matches the contract name above. So if you're token is called TutorialToken, make sure the //contract name above is also TutorialToken instead of ERC20Token
-
-    function ERC20Token(
-        ) {
-        balances[msg.sender] = NUMBER_OF_TOKENS_HERE;               // Give the creator all initial tokens (100000 for example)
-        totalSupply = NUMBER_OF_TOKENS_HERE;                        // Update total supply (100000 for example)
-        name = "NAME OF YOUR TOKEN HERE";                                   // Set the name for display purposes
-        decimals = 0;                            // Amount of decimals for display purposes
-        symbol = "SYM";                               // Set the symbol for display purposes
+    function SrsBizCoin() {
+        balances[msg.sender] = 250000000000000000000000000;
+        totalSupply = 250000000000000000000000000;
+        name = "SrsBizCoin";
+        decimals = 18;
+        symbol = "SBZC";
     }
 
     /* Approves and then calls the receiving contract */
